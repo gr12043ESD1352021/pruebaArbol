@@ -27,6 +27,8 @@ extern "C" {
     nodoArbol *iniciarArbol();
     nodoArbol *crearNodoArbol(int dato);
     nodoArbol *buscar(nodoArbol arbol , int dato);
+    nodoArbol *insertarNodoArbol(nodoArbol arbol, nodoArbol nuevo);
+    nodoArbol *insertar(nodoArbol arbol, int dato);
 
 
 #ifdef __cplusplus

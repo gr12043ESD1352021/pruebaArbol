@@ -32,3 +32,33 @@ nodoArbol *buscar(nodoArbol arbol , int dato){
     }
     return rta;
 }
+
+nodoArbol *insertarNodoArbol(nodoArbol arbol, nodoArbol nuevo){
+    if(arbol == NULL){
+        arbol = nuevo;
+    }
+    else{
+        if(nuevo->dato > arbol->dato){
+            arbol->der = insertarNodoArbol(arbol->der, nuevo);
+        }
+        else{
+            arbol->izq = insertarNodoArbol(arbol->izq, nuevo);
+        }
+    }
+    return arbol;
+}
+
+nodoArbol *insertar(nodoArbol arbol, int dato){
+    if(arbol == NULL){
+        arbol = crearNodoArbol(dato);
+    }
+    else{
+        if(dato > arbol->dato){
+            arbol->der = insertar(arbol->der, dato);
+        }
+        else{
+            arbol->der = insertar(arbol->izq, dato);
+        }
+    }
+    return arbol;
+}
