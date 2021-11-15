@@ -62,3 +62,11 @@ nodoArbol *insertar(nodoArbol arbol, int dato){
     }
     return arbol;
 }
+
+void preorder(nodoArbol *arbol){
+    if(arbol != NULL){
+        printf("%d", arbol->dato);
+        preorder(arbol->izq);
+        preorder(arbol->der);
+    }
+}

@@ -29,6 +29,7 @@ extern "C" {
     nodoArbol *buscar(nodoArbol arbol , int dato);
     nodoArbol *insertarNodoArbol(nodoArbol arbol, nodoArbol nuevo);
     nodoArbol *insertar(nodoArbol arbol, int dato);
+    void preorder(nodoArbol *arbol);
 
 
 #ifdef __cplusplus
