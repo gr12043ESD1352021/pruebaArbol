@@ -30,6 +30,7 @@ extern "C" {
     nodoArbol *insertarNodoArbol(nodoArbol arbol, nodoArbol nuevo);
     nodoArbol *insertar(nodoArbol arbol, int dato);
     void preorder(nodoArbol *arbol);
+    void inorder(nodoArbol *arbol);
 
 
 #ifdef __cplusplus
